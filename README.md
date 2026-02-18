@@ -9,7 +9,7 @@ of design differ hugely depending on their orientation on the print bed.
 
 ## Six-piece assembly
 
-This parametric design generates a die in six identical pyramidal 
+This parametric [OpenSCAD](https://openscad.org/) design generates a die in six identical pyramidal 
 pieces, one for each face, which can all print in the same orientation 
 and then interlock on assembly to ensure alignment. These are then 
 glued together to produce the finished die which should roll fairly 
@@ -34,8 +34,7 @@ drawtext() and some helper functions and modules that do the work.
 generate a variety of different dice.
 
 - [**permute.scad**](./permute.scad): is a library function that returns every 
-permutation of a list. See *eg_ning_nang_nong.scad* or 
-*eg_triathlon.scad* for examples of how this can relate to dice.
+permutation of a list. See [Permutation Designs](#permutation-designs) for how this can relate to dice.
 
 - [**LICENSE**](./LICENSE): what it says!
 
@@ -43,7 +42,7 @@ permutation of a list. See *eg_ning_nang_nong.scad* or
 
 ## Documentation
 
-die.scad is extensively documented in comments within the source.
+[die.scad](./die.scad) is extensively documented in comments within the source.
 
 ## Face designs
 
@@ -68,8 +67,8 @@ on many printers.
 There are six possible ways of putting three things in order 
 (permutations). This feature can been used with a six-sided die to draw 
 for order when three things or tasks have to be arranged in random 
-order. The triathlon training and [ning, nang, 
-nong](https://childrens.poetryarchive.org/poem/on-the-ning-nang-nong/) 
+order. The [triathlon training](eg_triathlon.scad) and [ning, nang, 
+nong](eg_ning_nang_nong.scad) (see [Spike Milligan](https://childrens.poetryarchive.org/poem/on-the-ning-nang-nong/))
 examples illustrate this. (in Surf Life Saving competition, this is 
 great for Oceanman events!)
 
