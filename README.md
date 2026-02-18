@@ -12,7 +12,8 @@ of design differ hugely depending on their orientation on the print bed.
 This parametric design generates a die in six identical pyramidal 
 pieces, one for each face, which can all print in the same orientation 
 and then interlock on assembly to ensure alignment. These are then 
-glued together to produce the finished die which should roll fairly. 
+glued together to produce the finished die which should roll fairly 
+provided there are no huge discrepencies between the images on the faces. 
 Letters printed on the inside of each piece should be matched up (A-A, 
 B-B etc.) to ensure the pieces are fitted in the correct positions.
 
@@ -26,7 +27,7 @@ right angles.
 
 # Files
 
-- **die.scad**: contains the main modules die(), face(), drawimage(), 
+- [**die.scad**](./die.scad): contains the main modules die(), face(), drawimage(), 
 drawtext() and some helper functions and modules that do the work.
 
 - **eg_xxx.scad**: are example files which include *die.scad* to 
