@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32mm"
+   height="32mm"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg1003"
+   sodipodi:docname="die_6spot.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1561"
+     inkscape:window-height="852"
+     id="namedview1953"
+     showgrid="false"
+     inkscape:zoom="0.32382505"
+     inkscape:cx="112.71518"
+     inkscape:cy="-60.217701"
+     inkscape:window-x="1"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     inkscape:object-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:object-nodes="false"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs997" />
+  <metadata
+     id="metadata1000">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     style="stroke-width:1"
+     transform="translate(0,-265)">
+    <path
+       id="path2"
+       style="stroke-width:0.15;stroke-linecap:round;stroke-miterlimit:10"
+       d="m 21.870088,286.87009 2.1486,-8.01868 -5.870088,-5.8701 -8.018688,2.14861 -2.1486,8.01868 5.8701,5.87009 z m 2.906376,2.90637 -11.988876,3.21242 -8.776464,-8.77648 3.212412,-11.98886 11.988864,-3.21242 8.776476,8.77647 z"
+       sodipodi:nodetypes="cccccccccccccc" />
+  </g>
+</svg>
