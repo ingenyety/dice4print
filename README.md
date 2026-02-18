@@ -33,13 +33,13 @@ drawtext() and some helper functions and modules that do the work.
 - **eg_xxx.scad**: are example files which include *die.scad* to 
 generate a variety of different dice.
 
-- **permute.scad**: is a library function that returns every 
+- [**permute.scad**](./permute.scad): is a library function that returns every 
 permutation of a list. See *eg_ning_nang_nong.scad* or 
 *eg_triathlon.scad* for examples of how this can relate to dice.
 
-- **LICENSE**: what it says!
+- [**LICENSE**](./LICENSE): what it says!
 
-- **README.md**: This file (or the markdown that generated it).
+- [**README.md**](./README.md): This file (or the markdown that generated it).
 
 ## Documentation
 
