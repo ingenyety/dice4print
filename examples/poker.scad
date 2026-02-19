@@ -4,13 +4,17 @@ Copyright (c) 2020-2026, Philip Nye.
 #tabs=4s
 ----------------------------------------------------------------------*/
 
-include <die.scad>
+include <dice4print/die.scad>
 
-select = 2;  // design 1 or 2
-layout = "2x3u";
+select = 1;  // design 1 or 2
+layout = "3x2u";
+
+$color_main = "bisque";
+$color_design = "crimson";
+$color_cut = undef;
 
 if (select == 1)
-    die(32, layout, 
+    die(25, layout, 
         img = [
             "img/poker1_9.svg",
             "img/poker1_10.svg", 
@@ -18,10 +22,10 @@ if (select == 1)
             "img/poker1_Q.svg", 
             "img/poker1_K.svg", 
             "img/poker1_A.svg"
-        ], rescale = 1, spacing = 50);
+        ], rescale = 1);
 
 else if (select == 2)
-    die(32, layout, 
+    die(25, layout, 
         img = [
             "img/poker2_9.svg",
             "img/poker2_10.svg", 
@@ -29,4 +33,4 @@ else if (select == 2)
             "img/poker2_Q.svg", 
             "img/poker2_K.svg", 
             "img/poker2_A.svg"
-        ], rescale = 1, spacing = 50);
+        ], rescale = 1);
