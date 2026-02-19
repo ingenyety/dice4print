@@ -43,6 +43,9 @@ $fs=0.2;
 $fn=0;
 iota = 1/128;
 
+$color_main = undef;
+$color_design = undef;
+$color_cut = undef;
 /*----------------------------------------------------------------------
 
 module die()
@@ -242,6 +245,7 @@ module face(fsize, edgeLabels, engrave_depth)
     difference() {
         union() {
             //translate([0, 0, 0.5 * fsize])
+            color($color_main)
             intersection() {
                 /* base pyramid */
                 mirror([0, 0, 1])
@@ -263,16 +267,19 @@ module face(fsize, edgeLabels, engrave_depth)
             }
     
             mirror([0, 0, 1])
+            color($color_main)
             linear_extrude(blockZ)
             square([blockX, blockY], center = true);
 
             if (engrave_depth < 0)
+                color($color_design)
                 linear_extrude(height = -engrave_depth) 
                 scale(fsize * $die_use_size)
                 children();  // emboss
         }
 
         if (engrave_depth > 0) 
+            color($color_design)
             translate([0, 0, -engrave_depth])    // engrave needs shifting down
             linear_extrude(height = engrave_depth + iota) 
             scale(fsize * $die_use_size)
@@ -280,12 +287,14 @@ module face(fsize, edgeLabels, engrave_depth)
 
         zRotRepeat(2, startAngle = 90)
         translate([-0.5 * fsize,  -0.5 * (blockY + clr), -0.5 * fsize])
+        color($color_cut)
         cube([blockZ + 0.5 * clr, blockY + clr, 0.5 * (blockX + clr)]);
 
         for (i = [0 : 3]) { /* four edges */
             if (edgeLabels[i]) {
                 rotate([0, 0, 360 - 90 * i])
                 multmatrix(m = mEdgeLabel)
+                color($color_cut)
                 linear_extrude(height = dpthELbl + iota)
                 text(edgeLabels[i], font = $labelfont, size = 0.16 * fsize, halign = "center", valign = "baseline");
             }
@@ -633,7 +642,7 @@ layouts = [
     ["3x2d", function (size, spacing)
         let(P = !is_undef(spacing) ? 
                 max(spacing, size) :
-                (ceil(size/10) + 1) * 10
+                (ceil(size/10) + 1) * 10 + 50
         )
         [
             [[ 1, 0, 0, -P], [ 0, -1,  0,  0.5 * P], [ 0,  0, -1,  0]], 
@@ -651,7 +660,7 @@ layouts = [
     ["3x2u", function (size, spacing)
         let(P = !is_undef(spacing) ? 
                 max(spacing, size) :
-                (ceil(size/10) + 1) * 10
+                (ceil(size/10) + 1) * 10 + 50
         )
         [
             [[ 1, 0, 0, -P], [ 0,  1,  0,  0.5 * P], [ 0,  0,  1,  0]], 
@@ -669,7 +678,7 @@ layouts = [
     ["2x3d", function (size, spacing)
         let(P = !is_undef(spacing) ? 
                 max(spacing, size) :
-                (ceil(size/10) + 1) * 10
+                (ceil(size/10) + 1) * 10 + 50
         )
         [
             [[ 1, 0, 0, -0.5 * P], [ 0, -1,  0,  P], [ 0,  0, -1,  0]], 
@@ -687,7 +696,7 @@ layouts = [
     ["2x3u", function (size, spacing)
         let(P = !is_undef(spacing) ? 
                 max(spacing, size) :
-                (ceil(size/10) + 1) * 10
+                (ceil(size/10) + 1) * 10 + 50
         )
         [
             [[ 1, 0, 0, -0.5 * P], [ 0, 1,  0,  P], [ 0,  0, 1,  0]], 
